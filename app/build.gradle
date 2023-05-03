@@ -1,7 +1,6 @@
 import dependencies.AndroidTestDependencies
 import dependencies.Dependencies
 import dependencies.SupportDependencies
-import dependencies.TestDependencies
 
 import Application
 import Versions
@@ -9,6 +8,10 @@ import Versions
 plugins {
   id 'com.android.application'
   id 'org.jetbrains.kotlin.android'
+  id 'kotlin-parcelize'
+  id 'kotlin-kapt'
+  id 'com.google.gms.google-services'
+  id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -45,10 +48,22 @@ android {
 
 dependencies {
 
+  //Core
   implementation Dependencies.coreKtx
-  implementation SupportDependencies.appCompat
   implementation Dependencies.material
-  testImplementation TestDependencies.junit4
-  androidTestImplementation AndroidTestDependencies.junit
-  androidTestImplementation AndroidTestDependencies.espressoCore
+
+  //Dependencies
+  implementation Dependencies.dagger
+
+  //Annotation Processing
+  kapt AnnotationProcessing.daggerCompiler
+
+  //Firebase
+  implementation Dependencies.firebaseFirestore
+  implementation Dependencies.firebaseAnalytics
+  implementation Dependencies.firebaseAuth
+  implementation Dependencies.firebaseCrashlytics
+
+  //Support
+  implementation SupportDependencies.appCompat
 }

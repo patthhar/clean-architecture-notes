@@ -1,4 +1,11 @@
 object Versions {
+  const val firebaseCrashlyticsGradle = "2.9.5"
+  const val gradleTools = "3.4.0"
+  const val googleServices = "4.3.15"
+  const val firebaseFirestore = "24.6.0"
+  const val firebaseAnalytics = "21.2.2"
+  const val firebaseAuth = "22.0.0"
+  const val firebaseCrashlyticsKtx = "18.3.7"
   const val junit4 = "4.13.2"
   const val espressoCore = "3.5.1"
   const val androidTestJunit = "1.1.5"
