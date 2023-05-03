@@ -48,9 +48,12 @@ android {
 
 dependencies {
 
-  //Core
+  //Kotlin
   implementation Dependencies.coreKtx
   implementation Dependencies.material
+  implementation Dependencies.kotlinCoroutines
+  implementation Dependencies.kotlinCoroutinesAndroid
+  implementation Dependencies.kotlinCoroutinesPlayServices
 
   //Dependencies
   implementation Dependencies.dagger

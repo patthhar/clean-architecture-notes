@@ -1,4 +1,6 @@
 object Versions {
+  const val kotlinCoroutines = "1.6.4"
+  const val kotlinCoroutinesAndroid = "1.3.9"
   const val firebaseCrashlyticsGradle = "2.9.5"
   const val gradleTools = "3.4.0"
   const val googleServices = "4.3.15"
